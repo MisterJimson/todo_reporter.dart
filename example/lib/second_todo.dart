@@ -1,4 +1,4 @@
-import 'package:todo_reporter/todo_reporter.dart';
+import 'package:rx_prop/rx_prop.dart';
 
 part "second_todo.g.dart";
 

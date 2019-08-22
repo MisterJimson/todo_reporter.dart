@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      rx_prop_generator|rx_prop:
+        enabled: true
+
+builders:
+  rx_prop:
+    target: ":rx_prop_generator"
+    import: "package:rx_prop_generator/builder.dart"
+    builder_factories: ["rxProp"]
+    build_extensions: {".dart": [".rx_prop.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
